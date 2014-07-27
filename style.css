@@ -1,0 +1,368 @@
+/*
+	Theme Name: FAQ
+	Theme URI: http://faq.hoccer.com
+
+	Author: Peter Amende
+	Author URI: http://www.zutrinken.com
+
+	Description: FAQ for Hoccer XO
+	Tags:
+
+	License: MIT License
+	License URI:
+	
+	Version: 1
+
+	Github Theme URI:
+	GitHub Branch: master
+*/
+
+
+/* ==========================================================================
+   Includes
+   ========================================================================== */
+
+@import url('css/normalize.css');
+@import url('css/basic.css');
+@import url('css/wordpress.css');
+@import url('css/shortcode.css');
+@import url('css/font-awesome.min.css');
+
+
+/* ==========================================================================
+   Default
+   ========================================================================== */
+
+.inner {
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 0 48px;
+}
+@media only screen and (max-width: 480px) {
+	.inner {
+		padding: 0 16px;
+	}
+}
+
+#index-list li {
+	position: relative;
+}
+#index-list a[href]:after {
+	content: attr(href);
+	color: #c2c7cc;
+	text-decoration: none !important;
+	position: absolute;
+	left: 25%;
+	width: 75%;
+	overflow: hidden;
+	font-family: monospace;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+#lang_sel_footer {
+	background-color: transparent !important;
+	border: 0 !important;
+	clear: both;
+	font: inherit !important;
+	margin: 0;
+	min-height: 0 !important;
+	padding: 64px 0 !important;
+	text-align: center;
+}
+#lang_sel_footer ul {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+#lang_sel_footer ul li {
+	display: inline;
+	line-height: 1em !important;
+	margin: 0 4px !important;
+	padding: 0;
+	white-space: nowrap;
+}
+#lang_sel_footer ul li a {
+	display: inline-block !important;
+	padding: 8px 10px 6px !important;
+	text-decoration: none;
+	border: 0;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+#lang_sel_footer ul li a:hover,
+#lang_sel_footer ul li a:focus {
+	background: #edf2f5;
+}
+#lang_sel_footer ul li a.lang_sel_sel {
+	background: #dde5eb;
+}
+
+/* ==========================================================================
+   Search
+   ========================================================================== */
+
+
+#search {
+	display: none;
+	position: fixed;
+	top: 72px;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4000;
+	overflow-y: scroll;
+
+	background: #f9f9f9;
+	background: -webkit-linear-gradient(top, #f9f9f9 50%, rgba(249,249,249,0.75) 100%);
+	background: -moz-linear-gradient(top, #f9f9f9 50%, rgba(249,249,249,0.75) 100%);
+	background: -ms-linear-gradient(top, #f9f9f9 50%, rgba(249,249,249,0.75) 100%);
+	background: -o-linear-gradient(top, #f9f9f9 50%, rgba(249,249,249,0.75) 100%);
+	background: linear-gradient(top, #f9f9f9 50%,rgba(249,249,249,0.75) 100%);
+}
+#search.open {
+	display: block;
+}
+.searcharea .searchform {
+	position: relative;
+	width: 62.5%;
+	min-width: 47%;
+	height: auto;
+	margin: 144px auto 0;
+	padding: 0;
+	background: #fff;
+	border-radius: 4px;
+	border: 1px solid #f2f3f5;
+}
+.searcharea .searchform-input,
+.searcharea .searchform-input:hover,
+.searcharea .searchform-input:focus {
+	font-size: 1.6em;
+	font-weight: 100;
+	width: 95%;
+	height: 40px;
+	padding: 0;
+	margin: 16px 24px;
+	border: 0;
+	background: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: medium none;
+}
+.searcharea .searchform-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 72px;
+	height: 72px;
+	padding: 0;
+	line-height: 72px;
+	text-align: center;
+	font-size: 1.6em;
+	background: transparent;
+	border: 0;
+	color: #333;
+}
+#search-search {
+	margin: 144px auto;	
+}
+.no-js #search-search.searcharea .searchform {
+	border: 1px solid #b6babf;
+}
+
+/* ==========================================================================
+   Post
+   ========================================================================== */
+
+.hentry {
+	position: relative;
+	padding: 64px 0;
+}
+@media only screen and (max-width: 480px) {
+	.hentry {
+		position: relative;
+		padding: 32px 0;
+	}
+}
+.post-back {}
+.post-back i {
+	position: absolute;
+	width: 16px;
+	margin-left: -16px;
+	text-align: center;
+	line-height: 1.2em;
+}
+.post-title {
+	color: #000;
+	font-size: 2em;
+	font-weight: 700;
+	line-height: 1.4em;
+	text-indent: -2px;
+	margin: 0 0 16px;
+	padding: 0;
+	
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+}
+.post-title a {
+	text-decoration: none;
+	border-bottom: 1.5px solid transparent;
+}
+.post-title a:hover,
+.post-title a:focus {
+	border-bottom-color: #000;
+}
+.post-meta {
+	font-size: 0.875em;
+	line-height: 1.8em;
+	font-weight: 300;
+	color: #757a80;
+	margin-bottom: 16px;
+}
+.post-meta a {
+	color: #2e3033;
+	font-weight: 400;
+	border-bottom: 1px solid transparent;
+}
+.post-meta a:hover,
+.post-meta a:focus {
+	color: #232529;
+	border-bottom-color: #757a80;
+}
+.post-content {
+	line-height: 2em;
+}
+.post-excerpt > p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.post-excerpt > p:first-child {
+	margin-top: 0;
+}
+.post-article {
+	position: relative;
+}
+.post-article .post-cut {
+	color: #232529;
+}
+.post-article .post-more {
+	position: relative;
+	font-weight: 400;
+	color: #2996cc;
+	margin-left: 1em;
+	white-space: pre;
+	display: inline-block;
+}
+.post-article .post-more:hover,
+.post-article .post-more:focus {
+	color: #1f7099;
+}
+.post-article .post-more:after {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f0da';
+	position: absolute;
+	top: 0.1em;
+	left: -0.8em;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	color: #ff9500;
+}
+.post-article .post-more:hover:after,
+.post-article .post-more:focus:after {
+	color: #ff6a00;
+}
+
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+#pagination {
+	padding: 48px 0 64px;
+	background: #fff;
+	border-bottom: 1px solid #e4e6eb;
+}
+.pagination-info {
+	float: left;
+}
+.pagination-pager {
+	float: right;
+}
+.pagination-info > *,
+.pagination-pager > * {
+	display: block;
+	float: left;
+	
+	margin: 0 0 0 -1px;
+	padding: 16px 24px;
+
+	border: 1px solid #e4e6eb;
+
+	font-size: 1em;
+	line-height: 1.5em;
+	text-align: center;
+
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+}
+.pagination-pager > span {
+	color: #b6babf;
+}
+.pagination-info > * {
+	color: #757a80;
+	background: #f2f3f5;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin: 0 -1px 0 0;
+}
+.pagination-pager > * i {
+	font-size: 1.6em;
+	line-height: 0.625em;
+	vertical-align: text-bottom;
+	font-weight: 700;
+	margin: 0 1px;
+	position: relative;
+	top: -2px;
+}
+.pagination-pager > *.pagination-previous {
+	-webkit-border-radius: 2px 0 0 2px;
+	border-radius: 2px 0 0 2px;
+}
+.pagination-pager > *.pagination-next {
+	-webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+.pagination-pager > *.pagination-previous span,
+.pagination-pager > *.pagination-next span {
+	display: none;
+}
+.pagination-pager > *.pagination-dots {
+	font-size: 1em;
+}
+.pagination-pager > a {
+	color: #2e3033;
+}
+.pagination-pager > a:hover,
+.pagination-pager > a:focus {
+	border-color: #e4e6eb;
+}
+.pagination-pager > a:hover,
+.pagination-pager > a:focus {
+	background: #f2f3f5;
+	color: #232529;
+}
+.pagination-pager > a.current-page {
+	background: #f2f3f5;
+	color: #757a80;
+}
+
+
