@@ -6,7 +6,7 @@ The current wordpress installation requires the [WPML](http://wpml.org/) plugin 
 
 ## Preview
 
-[faq.hoccer.com](http://faq.hoccer.com) is only a index that lists all pages with their permalinks and shouldn’t be used anywhere.
+[faq.hoccer.com](http://faq.hoccer.com) is only an index that lists all pages with their permalinks and shouldn’t be used anywhere.
 
 The page header (title and backlink) and language switch at the bottom are only visible on desktop browsers. On mobile they will be filtered by a their useragents.
 
