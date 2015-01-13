@@ -44,32 +44,22 @@
 	}
 }
 
-#index-list li {
-	position: relative;
-}
-#index-list a[href]:after {
-	content: attr(href);
-	color: #c2c7cc;
-	text-decoration: none !important;
-	position: absolute;
-	left: 25%;
-	width: 75%;
-	overflow: hidden;
-	font-family: monospace;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
 
 #lang_sel_footer {
-	background-color: transparent !important;
 	border: 0 !important;
 	clear: both;
 	font: inherit !important;
 	margin: 0;
 	min-height: 0 !important;
-	padding: 64px 0 !important;
+	padding: 9px 0 !important;
 	text-align: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #fff !important;
+	width: 100%;
+	box-shadow: 0 -1px 5px rgba(0,0,0,0.2), 0 1px 0 rgba(0,0,0,0.17);
+	-webkit-box-shadow: 0 -1px 5px rgba(0,0,0,0.2), 0 1px 0 rgba(0,0,0,0.17);
 }
 #lang_sel_footer ul {
 	list-style: none outside none;
@@ -78,25 +68,36 @@
 }
 #lang_sel_footer ul li {
 	display: inline;
-	line-height: 1em !important;
-	margin: 0 4px !important;
+	line-height: 28px !important;
+	margin: 0 0 0 -1px !important;
 	padding: 0;
 	white-space: nowrap;
 }
 #lang_sel_footer ul li a {
 	display: inline-block !important;
-	padding: 8px 10px 6px !important;
+	padding: 0 !important;
+	height: 28px;
 	text-decoration: none;
-	border: 0;
+	border: 1px solid rgba(51,153,255,1);
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	font-size: 13px;
+	min-width: 90px;
+	color: rgba(51,153,255,1);
+}
+#lang_sel_footer ul li:first-child a {
+	border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+}
+#lang_sel_footer ul li:last-child a {
+	border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
 }
 #lang_sel_footer ul li a:hover,
-#lang_sel_footer ul li a:focus {
-	background: #edf2f5;
-}
+#lang_sel_footer ul li a:focus {}
 #lang_sel_footer ul li a.lang_sel_sel {
-	background: #dde5eb;
+	background: rgba(51,153,255,1);
+	color: #fff;
 }
 
 /* ==========================================================================
@@ -184,14 +185,6 @@
 		position: relative;
 		padding: 32px 0;
 	}
-}
-.post-back {}
-.post-back i {
-	position: absolute;
-	width: 16px;
-	margin-left: -16px;
-	text-align: center;
-	line-height: 1.2em;
 }
 .post-title {
 	color: #000;
@@ -281,6 +274,140 @@
 	color: #ff6a00;
 }
 
+/* ==========================================================================
+   FAQ Post
+   ========================================================================== */
+
+#faq {
+	margin: auto;
+}
+.faq {
+	padding: 0;
+	margin: 0;
+}
+.faq .faq-title {
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+	padding: 1em 32px;
+	padding-right: 48px !important;
+	font-size: 1em;
+	line-height: 1em;
+}
+.faq .faq-title:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: #e3e3e3;
+}
+.faq .faq-title:before {
+	content: '+';
+	position: absolute;
+	height: 32px;
+	width: 16px;
+	right: 16px;
+	top: 50%;
+	margin-top: -16px;
+	line-height: 32px;
+	vertical-align: middle;
+	text-align: center;
+	
+	font-size: 20px;
+}
+.faq.active .faq-title:before {
+	content: '-';
+}
+.faq .faq-content {
+	display: none;
+	position: relative;
+}
+.faq .faq-content:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: #e3e3e3;
+}
+.faq.active .faq-content {
+	display: block;
+	padding: 0.5em 32px;
+}
+#faq.ios .faq-content > * {
+	margin: 0.5em 0;
+}
+
+/* ---------------- iOS */
+
+#faq.ios {
+	font-family: 'Helvetica Neue', sans-serif;
+}
+#faq.ios .faq-title {
+	font-size: 16px;
+	letter-spacing: 0.1px;
+	line-height: 20px;
+	font-weight: 300;
+	padding: 12px 16px;
+	background: #fff;
+	color: #000;
+}
+#faq.ios .faq-title:after {
+	background: #d3d3d3;
+}
+#faq.ios .faq-content {
+	color: #7a7980;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	word-spacing: 0.1px;
+	line-height: 20px;
+	padding: 14px 16px;
+	background: #f3f2f7;
+}
+#faq.ios .faq-content:after {
+	background: #d3d3d3;
+}
+#faq.ios .faq-content > * {
+	margin: 18px 0;
+}
+
+/* ---------------- Android */
+
+#faq.android {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.1px;
+}
+#faq.android .faq-title {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	padding: 10px 16px;
+	background: #fff;
+	color: #2c2c2c;
+}
+#faq.android .faq-title:after {
+	background: #e3e3e3;
+}
+#faq.android .faq-title:before {
+	color: #868686;
+	font-weight: 300;
+}
+#faq.android .faq-content {
+	color: #4d4d4d;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 14px 16px;
+	background: #f5f5f5;
+}
+#faq.android .faq-content:after {
+	background: #e3e3e3;
+}
+#faq.android .faq-content > * {
+	margin: 20px 0;
+}
 
 /* ==========================================================================
    Pagination

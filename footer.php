@@ -1,15 +1,6 @@
-		<?php 
-			$iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
-			$iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-			$iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
-			$Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
-			if($iPod || $iPhone || $iPad || $Android) {
-				$mobile = true;
-			}
-		?>
-
-		<?php if(!$mobile) : ?>
+		<?php if ( is_user_logged_in() ) : ?> 
 			<?php language_switcher();?>
+			<?php echo '<style>body {padding-top: 48px;}</style>'; ?>
 		<?php endif; ?>
 
 		<?php wp_footer(); ?>

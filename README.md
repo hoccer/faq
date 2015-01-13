@@ -1,23 +1,16 @@
 # FAQ
 
-This repo contains a wordpress theme for [faq.hoccer.com](http://faq.hoccer.com) and guidelines.
-
-The current wordpress installation requires the [WPML](http://wpml.org/) plugin for multilanguage support. Currently english and german are active languages.
+This repo contains a wordpress theme for [faq.hoccer.com](http://faq.hoccer.com). The current wordpress installation requires the [WPML](http://wpml.org/) plugin for multilanguage support. Currently english and german are active languages.
 
 ## Preview
 
-[faq.hoccer.com](http://faq.hoccer.com) is only an index that lists all pages with their permalinks and shouldn’t be used anywhere.
+[faq.hoccer.com](http://faq.hoccer.com) shows all FAQs as posts.
 
-The page header (title and backlink) and language switch at the bottom are only visible on desktop browsers. On mobile they will be filtered by a their useragents.
+## Static Pages
 
-## Edit a FAQ
+The FAQ and Tutorial inside the mobile clients are static pages at the moment. (The static FAQ will be disabled soon)
 
-A FAQ is a simple wordpress page. The "Tutorial" contains anchors in it’s titles and icons by an icon-font. Make sure to edit pages in wordpress editors text-mode. The icon-font is "Font Awesome 4.1.0". All usable icons are listed [here](http://fortawesome.github.io/Font-Awesome/icons/).
 
 ## Add a new FAQ
 
-When adding a new FAQ page make sure that the title is named ````FAQ```` and the permalink is ````faq-xo-WHITELABELNAME````.
-
-Via the language box you can add a translation (currently only german is active). If you edit the translation of the page make sure that the permalink is the same ````faq-xo-WHITELABELNAME````.
-
-The baseurl will be localized automatically. The default english version is ````http://faq.hoccer.com/faq-xo-WHITELABEL```` and the german version will be ````http://faq.hoccer.com/de/faq-xo-WHITELABEL````.
+A FAQ is a simple blogpost. They are ordered by date, so if you want to place a new FAQ between existing ones make sure to set the date depending on the current posts. You can add the tags ````ios```` or ````android```` that will be displayed only on the specific device. Via the language box you can add a translation (currently only german is active).
