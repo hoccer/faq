@@ -1,11 +1,11 @@
 jQuery(function($) {
 	
-	$('.faq').click(function() {
-		if($(this).hasClass('active')) {
-			$(this).removeClass('active');
+	$('.faq-title').click(function() {
+		if($(this).parent('.faq').hasClass('active')) {
+			$(this).parent('.faq').removeClass('active');
 		} else {
 			$('.faq').removeClass('active');
-			$(this).addClass('active');
+			$(this).parent('.faq').addClass('active');
 		}
 	});
 	
