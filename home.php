@@ -15,11 +15,11 @@
 		}
 	?>
 
-	<?php $the_query = new WP_Query('order=ASC&posts_per_page=100'); ?>
 
-	<?php if ($the_query->have_posts()) : ?>
+
+	<?php if (have_posts()) : ?>
 		<div id="faq" class="<?php echo $os; ?>">
-			<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 				<section id="faq-<?php the_ID(); ?>" <?php post_class('faq'); ?>>
 					<h2 class="faq-title">
 						<?php the_title(); ?>
