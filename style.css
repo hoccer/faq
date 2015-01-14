@@ -279,7 +279,18 @@
    ========================================================================== */
 
 #faq {
-	margin: auto;
+	margin: 100px auto;
+	max-width: 640px;
+	border-top: 1px solid #e3e3e3;
+	border-left: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+}
+@media only screen and (max-width: 768px) {
+	#faq {
+		margin: auto;
+		max-width: none;
+		border: 0;
+	}
 }
 .faq {
 	padding: 0;
@@ -293,6 +304,10 @@
 	padding-right: 48px !important;
 	font-size: 1em;
 	line-height: 1em;
+	font-weight: 600;
+	letter-spacing: -0.1px;
+	background: #fff;
+	color: #000;
 }
 .faq .faq-title:after {
 	content: '';
@@ -314,7 +329,8 @@
 	line-height: 32px;
 	vertical-align: middle;
 	text-align: center;
-	
+	color: #999;
+	font-weight: 300;
 	font-size: 20px;
 }
 .faq.active .faq-title:before {
@@ -323,6 +339,7 @@
 .faq .faq-content {
 	display: none;
 	position: relative;
+	background: #f4f4f4;
 }
 .faq .faq-content:after {
 	content: '';
@@ -345,6 +362,9 @@
 
 #faq.ios {
 	font-family: 'Helvetica Neue', sans-serif;
+	max-width: none;
+	border: 0;
+	margin: auto;
 }
 #faq.ios .faq-title {
 	font-size: 16px;
@@ -379,6 +399,9 @@
 #faq.android {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.1px;
+	max-width: none;
+	border: 0;
+	margin: auto;
 }
 #faq.android .faq-title {
 	font-size: 16px;
@@ -387,6 +410,7 @@
 	padding: 10px 16px;
 	background: #fff;
 	color: #2c2c2c;
+	letter-spacing: 0;
 }
 #faq.android .faq-title:after {
 	background: #e3e3e3;

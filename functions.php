@@ -5,6 +5,12 @@
 	   Initials
 	   ========================================================================== */
 
+add_action('wp_enqueue_scripts', 'hoccer_fonts');
+function hoccer_fonts() {
+	wp_register_style('hoccer-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic,700italic');
+	wp_enqueue_style('hoccer-fonts');
+}
+
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts() {
 	$template = get_template_directory_uri();

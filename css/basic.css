@@ -12,7 +12,7 @@ html {
 }
 
 body {
-	font-family: 'Helvetica Neue', sans-serif;	
+	font-family: 'Open Sans', sans-serif;	
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 
@@ -20,11 +20,12 @@ body {
 	line-height: 1.5em;
 	font-weight: 300;
 	
-	color: #2e3033;
+	color: #333;
+	background: #fbfbfb;
 }
 
 .ios body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 	letter-spacing: 0.1px;
 
 	font-size: 16px;
@@ -43,7 +44,7 @@ body {
 	color: #000;
 }
 .ios p, .ios ul, .ios ol {
-	margin: 0px 0 20px;
+	margin: 20px 0;
 }
 
 .android body {
@@ -65,7 +66,7 @@ body {
 	color: #2c2c2c;
 }
 .android p, .android ul, .android ol {
-	margin: 0px 0 20px;
+	margin: 20px 0;
 }
 
 
