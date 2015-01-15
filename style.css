@@ -11,7 +11,7 @@
 	License: MIT License
 	License URI:
 	
-	Version: 1
+	Version: 1.1
 
 	Github Theme URI:
 	GitHub Branch: master
@@ -300,30 +300,55 @@
 	margin: 0;
 	cursor: pointer;
 	position: relative;
-	padding: 1em 32px;
-	padding-right: 48px !important;
+	padding: 1em 16px;
+	padding-right: 48px;
 	font-size: 1em;
 	line-height: 1em;
 	font-weight: 600;
 	letter-spacing: -0.1px;
 	background: #fff;
 	color: #000;
+	border-bottom: 1px solid #e3e3e3;
 }
-.faq .faq-title:after {
-	content: '';
+.faq.ios .faq-title,
+.faq.android .faq-title {
+	padding-right: 72px;
+}
+.faq.ios .faq-title:after,
+.faq.android .faq-title:after {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '+';
 	position: absolute;
-	height: 1px;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	background: #e3e3e3;
+	height: 32px;
+	width: 16px;
+	top: 50%;
+	margin-top: -16px;
+	right: 40px;
+	line-height: 32px;
+	vertical-align: middle;
+	text-align: center;
+	color: #ccc;
+	font-weight: 300;
+	font-size: 20px;
+}
+.faq.ios .faq-title:after {
+	content: '\f179';
+	color: #a5adb0;
+}
+.faq.android .faq-title:after {
+	content: '\f17b';
+	color: #a4c739;
 }
 .faq .faq-title:before {
 	content: '+';
 	position: absolute;
 	height: 32px;
 	width: 16px;
-	right: 16px;
+	right: 8px;
 	top: 50%;
 	margin-top: -16px;
 	line-height: 32px;
@@ -352,7 +377,7 @@
 }
 .faq.active .faq-content {
 	display: block;
-	padding: 0.5em 32px;
+	padding: 0.5em 16px;
 }
 #faq.ios .faq-content > * {
 	margin: 0.5em 0;
@@ -371,12 +396,10 @@
 	letter-spacing: 0.1px;
 	line-height: 20px;
 	font-weight: 300;
-	padding: 12px 16px;
+	padding: 12px inherit 12px 16px;
 	background: #fff;
 	color: #000;
-}
-#faq.ios .faq-title:after {
-	background: #d3d3d3;
+	border-bottom: 1px solid #d3d3d3;
 }
 #faq.ios .faq-content {
 	color: #7a7980;
@@ -407,13 +430,11 @@
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
-	padding: 10px 16px;
+	padding: 10px inherit 10px 16px;
 	background: #fff;
 	color: #2c2c2c;
 	letter-spacing: 0;
-}
-#faq.android .faq-title:after {
-	background: #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
 }
 #faq.android .faq-title:before {
 	color: #868686;

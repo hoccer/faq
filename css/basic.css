@@ -24,7 +24,7 @@ body {
 	background: #fbfbfb;
 }
 
-.ios body {
+html.ios body {
 	font-family: 'Helvetica Neue', sans-serif;
 	letter-spacing: 0.1px;
 
@@ -34,7 +34,8 @@ body {
 	color: #7a7980;
 	background: #f3f2f7;
 }
-.ios h3, .ios h4 {
+html.ios h3,
+html.ios h4 {
 	font-size: 17px;
 	letter-spacing: 0.1px;
 	line-height: 24px;
@@ -43,11 +44,13 @@ body {
 	margin: 40px 0 30px;
 	color: #000;
 }
-.ios p, .ios ul, .ios ol {
+html.ios p,
+html.ios ul,
+html.ios ol {
 	margin: 20px 0;
 }
 
-.android body {
+html.android body {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 0.1px;
 
@@ -57,7 +60,8 @@ body {
 	color: #4d4d4d;
 	background: #fbfbfb;
 }
-.android h3, .android h4 {
+html.android h3,
+html.android h4 {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 24px;
@@ -65,7 +69,9 @@ body {
 	margin: 40px 0 30px;
 	color: #2c2c2c;
 }
-.android p, .android ul, .android ol {
+html.android p,
+html.android ul,
+html.android ol {
 	margin: 20px 0;
 }
 
@@ -167,11 +173,11 @@ h1 i, h2 i, h3 i, h4 i {
 }
 
 p {
-	margin: 32px 0;
+	margin: 16px 0;
 }
 ul, ol {
-	margin: 32px 0;
-    padding: 0 0 0 2em;
+	margin: 16px 0;
+    padding: 0 0 0 1.5em;
 }
 
 .post-article ul {
@@ -201,13 +207,8 @@ ul, ol {
 }
 
 ol ol, ul ul, ul ol, ol ul {
-	padding-left: 2.4em;
+	padding-left: 1.5em;
 	margin: 8px 0;
-}
-@media only screen and (max-width: 480px) {
-	ul, ol {
-		margin-left: 24px;
-	}
 }
 ol {
 	list-style-type: none;
@@ -218,23 +219,29 @@ ol li:before {
 	counter-increment: item;
 	position: absolute;
 	margin-left: -32px;
-	color: #c2c7cc;
+	color: rgba(0,0,0,0.4);
 	text-align: right;
 	width: 24px;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 hr {
     display: block;
     height: 0;
     border: 0;
-    border-top: 1px solid #b6babf;
-	margin: 48px 0 47px;
+    border-top: 1px solid #e3e3e3;
+	margin: 24px -16px;
     padding: 0;
+}
+html.ios hr {
+	border-color: #d3d3d3;
+}
+html.android hr {
+	border-color: #e3e3e3;
 }
 
 img {
-	display: block;
+	vertical-align: bottom;
 	max-width: 100%;
 	height: auto;
 	margin: auto;
