@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+	
 	<?php 
 		$iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
 		$iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
@@ -14,8 +14,6 @@
 			echo '<style>.faq.ios {display: none;}</style>';
 		}
 	?>
-
-
 
 	<?php if (have_posts()) : ?>
 		<div id="faq" class="<?php echo $os; ?>">
@@ -32,5 +30,5 @@
 			<?php endwhile; ?>
 		</div>
 	<?php endif; ?>
-
+	
 <?php get_footer(); ?>
