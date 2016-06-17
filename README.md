@@ -13,4 +13,5 @@ The FAQ and Tutorial inside the mobile clients are static pages at the moment. (
 
 ## Add a new FAQ
 
-A FAQ is a simple blogpost. They are ordered by date, so if you want to place a new FAQ between existing ones make sure to set the date depending on the current posts. You can add the tags ````ios```` or ````android```` that will be displayed only on the specific device. Via the language box you can add a translation (currently only german is active).
+A FAQ is a simple blogpost. They are ordered by date, so if you want to place a new FAQ between existing ones make sure to set the date depending on the current posts. You can add the tags ````ios```` or ````android```` that will be displayed only on the specific device. _If you add both tags, the post won't be displayed in neither of the devices._
+Via the language box you can add a translation (currently only german is active).
