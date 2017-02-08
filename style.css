@@ -10,7 +10,7 @@
 
 	License: MIT License
 	License URI:
-	
+
 	Version: 1.1
 
 	Github Theme URI:
@@ -26,7 +26,7 @@
 @import url('css/basic.css');
 @import url('css/wordpress.css');
 @import url('css/shortcode.css');
-@import url('css/font-awesome.min.css');
+@import url('css/font-awesome-4.7.0/css/font-awesome.min.css');
 
 
 /* ==========================================================================
@@ -166,7 +166,7 @@
 	color: #333;
 }
 #search-search {
-	margin: 144px auto;	
+	margin: 144px auto;
 }
 .no-js #search-search.searcharea .searchform {
 	border: 1px solid #b6babf;
@@ -194,7 +194,7 @@
 	text-indent: -2px;
 	margin: 0 0 16px;
 	padding: 0;
-	
+
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
@@ -477,7 +477,7 @@
 .pagination-pager > * {
 	display: block;
 	float: left;
-	
+
 	margin: 0 0 0 -1px;
 	padding: 16px 24px;
 
@@ -540,5 +540,3 @@
 	background: #f2f3f5;
 	color: #757a80;
 }
-
-
